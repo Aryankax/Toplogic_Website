@@ -45,13 +45,13 @@ const Home = () => {
         });
 
         gsap.to(industryRef.current, {
-            x: "-1500px",
+            x: "-1560px",
             scrollTrigger: {
                 trigger: "#industries",
                 scroller: "body",
                 markers: false,
                 start: "top 20%",
-                end: "top -660%",
+                end: "top -560%",
                 scrub: 2,
                 pin: true
             }
@@ -192,18 +192,18 @@ const Home = () => {
                     <div className="relative -top-[400px] h-[540px] bg-gray-200" id="industries">
                         <h1 className="text-center font-Poppins font-extrabold md:text-[70px] relative md:top-1 uppercase text-[40px] top-2">Industries</h1>
                         <div className="relative max-w-full px-10 top-12 md:top-4" id="industryScrollContainer" ref={industryRef}>
-            <div className="flex gap-12 pb-6" id="horizontal-container">
-                <IndustryDiv Name={"Automotive"} imageSrc={automotive}></IndustryDiv>
-                <IndustryDiv Name={"Real Estate"}></IndustryDiv>
-                <IndustryDiv Name={"Health Care"}></IndustryDiv>
-                <IndustryDiv Name={"E-commerce"}></IndustryDiv>
-                <IndustryDiv Name={"Transportation"}></IndustryDiv>
-                <IndustryDiv Name={"Manufacturing"}></IndustryDiv>
-                <IndustryDiv Name={"Education"}></IndustryDiv>
-                <IndustryDiv Name={"Software Vendors"}></IndustryDiv>
-                <IndustryDiv Name={"Fintech"}></IndustryDiv>
-                <IndustryDiv Name={"Travel & Tourism"}></IndustryDiv>
-                <IndustryDiv Name={"Entertainment"}></IndustryDiv>
+            <div className="flex gap-12 pb-6 translate-x-10" id="horizontal-container">
+                <IndustryDiv Name={"Automotive"} imageSrc={"automotive.jpg"}></IndustryDiv>
+                <IndustryDiv Name={"Real Estate"} imageSrc={"real-estate.jpg"}></IndustryDiv>
+                <IndustryDiv Name={"Health Care"} imageSrc={"healthcare.jpg"}></IndustryDiv>
+                <IndustryDiv Name={"E-commerce"} imageSrc={"ecommerce.jpg"}></IndustryDiv>
+                <IndustryDiv Name={"Transportation"} imageSrc={"transportation.jpg"}></IndustryDiv>
+                <IndustryDiv Name={"Manufacturing"} imageSrc={"manufacturing.jpg"}></IndustryDiv>
+                <IndustryDiv Name={"Software Dev"} imageSrc={"software-dev.jpg"}></IndustryDiv>
+                <IndustryDiv Name={"Education"} imageSrc={"education.jpg"}></IndustryDiv>
+                <IndustryDiv Name={"Fintech"} imageSrc={"fintech.jpg"}></IndustryDiv>
+                <IndustryDiv Name={"Travel & Tourism"} imageSrc={"tourism.jpg"}></IndustryDiv>
+                <IndustryDiv Name={"Entertainment"} imageSrc={"netflix.jpg"}></IndustryDiv>
                 </div>
                 </div>
                 </div>
