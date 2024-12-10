@@ -27,7 +27,7 @@ const Navbar = () => {
                     <p className="font-lato text-3xl uppercase font-bold">Toplogic</p>
                     <p className="font-lato text-3xl uppercase font-medium md:font-bold text-center md:absolute md:top-[32px] md:left-64">Softlabs</p>
                 </div>
-                <div className="relative Buttons md:flex md:text-md md:items-center md:block hidden md:ml-[500px] md:gap-5" id="navButtons">
+                <div className="relative Buttons md:flex md:text-md md:items-center md:block hidden md:ml-[250px] md:gap-5 lg:ml-[500px] xl:ml-[550px]" id="navButtons">
                 <button className="hover:text-green-800 navButton hover:border-b-4 hover:border-green-800 transition-all">ABOUT US</button>
                 <button className="hover:text-green-800 navButton hover:border-b-4 hover:border-green-800 transition-all">SERVICES</button>
                 <button className="hover:text-green-800 navButton hover:border-b-4 hover:border-green-800 transition-all">INDUSTRIES</button>
