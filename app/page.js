@@ -11,8 +11,14 @@ import ai from "../images/ai_2.png";
 import mobile from "../images/mobile.png";
 import digital from "../images/digital_transformation.png";
 import IndustryDiv from "@/components/industryDiv";
-import automotive from "../images/automotive.jpg";
-import { faL } from "@fortawesome/free-solid-svg-icons";
+import servicesCard from "@/components/servicesCard";
+import ServicesCard from "@/components/servicesCard";
+import webDev from "../images/web-dev.png";
+import appDev from "../images/app-dev.png";
+import aiml from "../images/ai3.png";
+import software from "../images/software-dev.png";
+import devops from "../images/devops.png";
+import seo from "../images/seo.png";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -64,7 +70,7 @@ const Home = () => {
 
     return (
         <>
-            <div className="relative bg-black min-h-screen overflow-x-hidden">
+            <div className="relative bg-black min-h-screen overflow-x-hidden overflow-y-hidden">
                 <div className="fixed top-0 left-0 right-0 z-50">
                     <Navbar />
                 </div>
@@ -191,6 +197,7 @@ const Home = () => {
                 <section className="Industries">
                     <div className="relative -top-[400px] h-[540px] bg-gray-200" id="industries">
                         <h1 className="text-center font-Poppins font-extrabold md:text-[70px] relative md:top-1 uppercase text-[40px] top-2">Industries</h1>
+                        <h1 className="text-green-800 text-sm font-lato font-bold relative  text-center md:text-[25px] md:-top-3">Where Ideas Transform into <span className="text-black">Digital Excellence</span>.</h1>
                         <div className="relative max-w-full px-10 top-12 md:top-4" id="industryScrollContainer" ref={industryRef}>
             <div className="flex gap-12 pb-6 translate-x-10" id="horizontal-container">
                 <IndustryDiv Name={"Automotive"} imageSrc={"automotive.jpg"}></IndustryDiv>
@@ -207,6 +214,18 @@ const Home = () => {
                 </div>
                 </div>
                 </div>
+                </section>
+                <section className="services">
+                    <h1 className="text-[40px] font-lato text-white text-center font-extrabold  uppercase relative -top-[380px] md:text-[70px]">Services</h1>
+                    <h1 className="text-green-700 text-lg font-lato font-bold relative -top-[380px]  text-center md:text-[25px]">Where Ideas Transform into <span className="text-white">Digital Excellence</span>.</h1>
+                    <div className="relative -top-[350px] ml-[20px] md:flex md:flex-row md:flex-wrap md:ml-48">
+                        <ServicesCard ServiceName={"Web Development"} ImgSrc={webDev}></ServicesCard>
+                        <ServicesCard ServiceName={"App Development"} ImgSrc={appDev}></ServicesCard>
+                        <ServicesCard ServiceName={"Software Development"} ImgSrc={software}></ServicesCard>
+                        <ServicesCard ServiceName={"Artificial Intelligence"} ImgSrc={aiml}></ServicesCard>
+                        <ServicesCard ServiceName={"Devops"} ImgSrc={devops} className=""></ServicesCard>
+                        <ServicesCard ServiceName={"SEO"} ImgSrc={seo}></ServicesCard>
+                    </div>
                 </section>
             </div>
         </>
