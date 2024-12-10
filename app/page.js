@@ -51,7 +51,7 @@ const Home = () => {
                 scroller: "body",
                 markers: false,
                 start: "top 20%",
-                end: "top -560%",
+                end: "top -660%",
                 scrub: 2,
                 pin: true
             }
