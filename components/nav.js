@@ -21,12 +21,19 @@ const Navbar = () => {
     return (
         <nav className="text-white border-b border-l-0 border-t-0 border-r-0 bg-black p-4 justify-between items-center relative flex">
             {/* Logo Section */}
-            <div className="flex items-center">
+            <div className="flex items-center md:relative md:left-16">
                 <Image alt="logo" src={logo} width={100} height={undefined}></Image>
                 <div className="">
                     <p className="font-lato text-3xl uppercase font-bold">Toplogic</p>
                     <p className="font-lato text-xl uppercase font-medium text-center">Softlabs</p>
                 </div>
+                <div className="relative Buttons md:flex md:text-md md:items-center md:block hidden md:gap-5 md:left-[430px]" id="navButtons">
+                <button className="hover:text-green-800 navButton hover:border-b-4 hover:border-green-800 transition-all">ABOUT US</button>
+                <button className="hover:text-green-800 navButton hover:border-b-4 hover:border-green-800 transition-all">SERVICES</button>
+                <button className="hover:text-green-800 navButton hover:border-b-4 hover:border-green-800 transition-all">INDUSTRIES</button>
+                <button className="hover:text-green-800 navButton hover:border-b-4 hover:border-green-800 transition-all">PROJECTS</button>
+                <button className="hover:text-green-800 navButton hover:border-b-4 hover:border-green-800 transition-all">CONTACT US</button>
+            </div>
             </div>
 
             {/* Menu Button */}
@@ -46,22 +53,27 @@ const Navbar = () => {
                     onClick={handleOverlayClick} // Close menu when clicking outside
                 >
                     <button
-                        className="text-white text-2xl hover:text-green-800 transition-all" 
+                        className="text-white text-2xl hover:text-green-800 transition-all uppercase" 
                     >
                         About Us
                     </button>
                     <button
-                        className="text-white text-2xl hover:text-green-800 transition-all"
+                        className="text-white text-2xl hover:text-green-800 transition-all uppercase"
                     >
                         Services
                     </button>
                     <button
-                        className="text-white text-2xl hover:text-green-800 transition-all"
+                        className="text-white text-2xl hover:text-green-800 transition-all uppercase"
                     >
                         Industries
                     </button>
                     <button
-                        className="text-white text-2xl hover:text-green-800 transition-all"
+                        className="text-white text-2xl hover:text-green-800 transition-all uppercase"
+                    >
+                        Projects
+                    </button>
+                    <button
+                        className="text-white text-2xl hover:text-green-800 transition-all uppercase"
                     >
                         Contact Us
                     </button>

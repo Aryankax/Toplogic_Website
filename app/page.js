@@ -63,14 +63,14 @@ const Home = () => {
 
     return (
         <>
-            <div className="relative bg-black min-h-screen">
+            <div className="relative bg-black min-h-screen ">
                 <div className="fixed top-0 left-0 right-0 z-50">
                     <Navbar />
                 </div>
 
                 {/* Video Background */}
                 <video
-                    className="absolute w-screen h-[700px] z-10 object-cover"
+                    className="hidden absolute w-screen h-[720px] md:h-[700px] z-10 md:object-cover md:block"
                     src="/Toplogic_Video.mp4"
                     autoPlay
                     loop
@@ -78,20 +78,20 @@ const Home = () => {
                 />
 
                 {/* Dark Overlay */}
-                <div className="absolute w-full h-[700px] z-20 bg-black opacity-70"></div>
+                <div className="absolute opacity-80 bg-gradient-to-r from-black via-green-950 to-green-800 w-full h-[700px] md:z-20 md:bg-black md:opacity-70 md:"></div>
 
                 {/* Hero Section Content */}
                 <section
                     className="Hero-section-content text-white relative w-screen h-screen z-20"
                     id="Hero-Content"
                 >
-                    <p className="font-Poppins font-bold text-green-700 absolute left-20 top-44 text-[100px] uppercase transition-colors duration-300 hover:text-green-500">
+                    <p className="font-Poppins font-bold text-green-700 absolute md:left-20 md:top-44 md:text-[100px] uppercase transition-colors duration-300 hover:text-green-500 left-5 top-44 text-[50px]">
                         Revolutionizing
                     </p>
-                    <p className="font-Poppins font-bold absolute left-20 top-[260px] text-[100px] text-green-700 uppercase transition-colors duration-300 hover:text-green-500">
-                        IT SOLUTIONS.
+                    <p className="font-Poppins font-bold text-green-700 absolute md:left-20 md:top-[270px] md:text-[100px] uppercase transition-colors duration-300 hover:text-green-500 left-5 top-56  text-[50px]">
+                        It Solutions.
                     </p>
-                    <div className="w-[800px] h-[500px] absolute top-[400px] left-20">
+                    <div className="w-[470px] md:w-[800px] h-[500px] absolute top-[300px] md:top-[390px] left-5 md:left-20 md:p-2">
                         <p className="font-Poppins text-lg">
                             Toplogic Softlabs is at the forefront of innovation, delivering cutting-edge IT solutions that are transforming industries. With a focus on excellence and sustainability, we provide tailor-made technology services designed to streamline operations, enhance efficiency, and drive growth. We are committed to revolutionizing the digital landscape, ensuring our clients stay ahead in the fast-paced world of technology.
                         </p>
