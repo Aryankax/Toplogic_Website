@@ -82,17 +82,17 @@ const Home = () => {
 
                 {/* Hero Section Content */}
                 <section
-                    className="Hero-section-content text-white relative w-screen h-screen z-20 top-[100px]"
+                    className="Hero-section-content text-white relative w-screen h-screen z-20"
                     id="Hero-Content"
                 >
-                    <p className="font-Poppins font-bold text-green-700 absolute md:left-20 md:top-44 md:text-[100px] uppercase transition-colors duration-300 hover:text-green-500 left-5 top-44 text-[40px]">
+                    <p className="font-Poppins font-bold text-green-700 absolute md:left-20 md:top-44 md:text-[100px] uppercase transition-colors duration-300 hover:text-green-500 left-5 top-40 text-[40px]">
                         Revolutionizing
                     </p>
-                    <p className="font-Poppins font-bold text-green-700 relative md:left-20 md:top-[270px] md:text-[100px] uppercase transition-colors duration-300 hover:text-green-500 left-5 top-56  text-[40px]">
+                    <p className="font-Poppins font-bold text-green-700 relative md:left-20 md:top-[270px] md:text-[100px] uppercase transition-colors duration-300 hover:text-green-500 left-5 top-52 text-[40px]">
                         It Solutions.
                     </p>
-                    <div className="w-[370px] md:w-[800px] h-[500px] absolute top-[300px] md:top-[390px] left-5 md:left-20 md:p-2">
-                        <p className="font-Poppins text-lg">
+                    <div className="w-[400px] md:w-[800px] h-[500px] absolute top-[290px] md:top-[390px] left-5 md:left-20 md:p-2 text-justify">
+                        <p className="font-Poppins text-[18px]">
                             Toplogic Softlabs is at the forefront of innovation, delivering cutting-edge IT solutions that are transforming industries. With a focus on excellence and sustainability, we provide tailor-made technology services designed to streamline operations, enhance efficiency, and drive growth. We are committed to revolutionizing the digital landscape, ensuring our clients stay ahead in the fast-paced world of technology.
                         </p>
                     </div>
