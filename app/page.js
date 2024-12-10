@@ -100,16 +100,16 @@ const Home = () => {
 
                 {/* Stats Section */}
                 <section className="Facts-and-Figures" ref={statsRef}>
-                    <div className="border-2 relative z-40 w-screen h-[450px] bg-gray-200">
-                        <h1 className="text-center text-[70px] font-Poppins font-extrabold uppercase relative top-4">
+                    <div className="border-2 relative z-40 w-screen md:h-[450px] bg-gray-200 h-[820px]">
+                        <h1 className="text-center md:text-[70px] font-Poppins font-extrabold uppercase relative md:top-4 top-3 text-[30px]">
                             Empowering Success
                         </h1>
-                        <h1 className="text-center relative text-[30px] font-Poppins font-bold text-green-800">
+                        <h1 className="text-center relative md:text-[30px] font-Poppins font-bold text-green-800 top-2">
                             Our Achievements in Numbers
                         </h1>
 
                         {/* Grid Layout for Stats Cards */}
-                        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-12 px-8 max-w-7xl mx-auto relative top-10">
+                        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:mt-12 px-8 md:px-8 md:max-w-7xl md:mx-auto relative top-8 md:top-10">
                             {/* Card 1 */}
                             <div className="text-center border-2 border-gray-600 rounded-lg p-6 transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-105 hover:bg-green-100">
                                 <p className="text-5xl font-extrabold">
