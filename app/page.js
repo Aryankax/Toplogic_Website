@@ -29,9 +29,21 @@ const Home = () => {
     const statsRef = useRef(null);
     const industryRef = useRef(null);
 
+    const apiKey = process.env.NEXT_PUBLIC_API_KEY;
+
     // Ensure we're on the client side before rendering CountUp
     useEffect(() => {
-        setIsClient(true);  // Set to true only after the component is mounted on the client
+            setIsClient(true); 
+            const Tawk_API = window.Tawk_API || {}, Tawk_LoadStart = new Date();
+            const script = document.createElement("script");
+            script.async = true;
+            script.src = apiKey;
+            script.charset = 'UTF-8';
+            script.setAttribute('crossorigin', '*');
+            document.body.appendChild(script);
+            return () => {
+                document.body.removeChild(script);
+            };
     }, []);
 
     // GSAP animation
