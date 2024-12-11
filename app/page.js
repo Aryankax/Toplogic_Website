@@ -218,13 +218,13 @@ const Home = () => {
                 <section className="services">
                     <h1 className="text-[40px] font-lato text-white text-center font-extrabold  uppercase relative -top-[380px] md:text-[70px]">Services</h1>
                     <h1 className="text-green-700 text-lg font-lato font-bold relative -top-[380px]  text-center md:text-[25px]">Where Ideas Transform into <span className="text-white">Digital Excellence</span>.</h1>
-                    <div className="relative -top-[350px] ml-[20px] md:flex md:flex-row md:flex-wrap md:ml-48">
-                        <ServicesCard ServiceName={"Web Development"} ImgSrc={webDev}></ServicesCard>
-                        <ServicesCard ServiceName={"App Development"} ImgSrc={appDev}></ServicesCard>
-                        <ServicesCard ServiceName={"Software Development"} ImgSrc={software}></ServicesCard>
-                        <ServicesCard ServiceName={"Artificial Intelligence"} ImgSrc={aiml}></ServicesCard>
-                        <ServicesCard ServiceName={"Devops"} ImgSrc={devops} className=""></ServicesCard>
-                        <ServicesCard ServiceName={"SEO"} ImgSrc={seo}></ServicesCard>
+                    <div className="relative -top-[350px] ml-1 md:flex md:flex-row md:flex-wrap md:left-28">
+                        <ServicesCard ServiceName={"Web Development"} ImgSrc={webDev} TitleSize={"xl"}></ServicesCard>
+                        <ServicesCard ServiceName={"App Development"} ImgSrc={appDev} TitleSize={"xl"}></ServicesCard>
+                        <ServicesCard ServiceName={"Software Development"} ImgSrc={software} TitleSize={"xl"}></ServicesCard>
+                        <ServicesCard ServiceName={"Artificial Intelligence"} ImgSrc={aiml} TitleSize={"xl"}></ServicesCard>
+                        <ServicesCard ServiceName={"Devops"} ImgSrc={devops} TitleSize={"xl"}></ServicesCard>
+                        <ServicesCard ServiceName={"SEO"} ImgSrc={seo} TitleSize={"xl"}></ServicesCard>
                     </div>
                 </section>
             </div>

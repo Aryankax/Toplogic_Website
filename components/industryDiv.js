@@ -15,7 +15,7 @@ const IndustryDiv = ({imageSrc, Name, Description}) => {
                 />
                 <h1 className="relative uppercase font-Poppins text-xl font-bold text-white z-10 -top-48 text-center">{Name}</h1>
                 <div className="bg-gray-800 w-[200px] h-[352px] opacity-50 relative md:-top-[379px] rounded-lg hover:opacity-0 transition-all duration-500 -top-[379px] hover:scale-105">
-                </div>   
+                </div>  
             </div>
         </>
     );
