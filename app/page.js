@@ -185,32 +185,34 @@ const Home = () => {
                     </div>
                 </section>
 
-                <section className="relative md:top-20 md:left-14 top-10 left-10 w-screen md:h-[1390px] h-[2800px]">
-                    <h1 className="text-white uppercase font-Poppins font-extrabold md:text-5xl text-5xl">Elevate Your</h1>
-                    <h1 className="text-white uppercase font-Poppins font-extrabold md:text-5xl text-4xl">Business With</h1>
+                <section className="relative md:top-20 md:left-14 top-10 left-10 w-screen md:h-[1390px] h-[2800px] overflow-x-auto">
+                    <div className="md:flex md:flex-col md:items-center md:relative md:-left-[370px]">
+                    <h1 className="text-white uppercase font-Poppins font-extrabold md:text-5xl text-5xl md:relative md:-left-2">Elevate Your</h1>
+                    <h1 className="text-white uppercase font-Poppins font-extrabold md:text-5xl text-4xl md:relative md:-left-20">Business With</h1>
                     <h1 className="text-white uppercase font-Poppins font-extrabold md:text-5xl text-3xl">Digital <span className="text-green-800">innovation</span>.</h1>
-                    <div className="flex flex-col items-center relative -left-10 top-5">
+                    </div>
+                    <div className="flex flex-col items-center relative -left-10 top-5 md:-left-96">
                     <div className="md:w-[500px] relative md:top-8 w-[300px] text-justify top-2">
                         <p className="text-gray-300 md:text-lg">At <span className="text-white font-bold">Toplogic Softlabs</span>, we excel in delivering world-class <span className="text-white font-bold">digital transformation consulting services</span> tailored to bridge the gap between <span className="text-white font-bold">business strategies and innovation</span>. Our team of experts specializes in reimagining business processes by integrating <span className="text-white font-bold">cutting-edge digital technologies</span> that empower enterprises to embrace modern digital ecosystems.
                         <span className="text-white font-bold"> Unlike one-size-fits-all solutions</span>, <span className="text-white font-bold">our approach focuses on developing a customized digital transformation framework</span>. We meticulously analyze your existing operating models and align them with <span className="font-bold text-white">industry-leading practices</span> to ensure seamless adaptation. Our consultants help businesses of all sizes—from <span className="font-bold text-white">startups to established industry leaders</span>—strategize and invest in open, <span className="font-bold text-white">scalable technologies</span> that <span className="text-white font-bold">elevate customer experiences</span>.
                         By <span className="text-white font-bold">leveraging automation, data-driven insights, and streamlined operations</span>, Toplogic Softlabs ensures your business stays ahead in the digital age. Unlock the potential of digital innovation with solutions designed to enhance <span className="text-white font-bold">efficiency</span>, <span className="text-white font-bold">agility</span>, and <span className="text-white font-bold">competitive advantage</span>.
                         </p>
                     </div>
-                    <div className="relative text-white md:w-[650px] md:-top-[550px] md:left-[520px] md:h-[700px] md:grid md:grid-cols-2 md:grid-rows-2 md:text-center top-[30px]">
+                    <div className="relative text-white md:w-[650px] md:-top-[550px] md:left-[650px] md:h-[700px] md:grid md:grid-cols-2 md:grid-rows-2 md:text-center top-[30px]">
                         <div className="">
                                 <Image src={cloud} width={60} height={undefined} className="md:h-auto relative md:left-32 md:top-1 left-32" alt="Cloud"></Image>
-                                <p className="font-Poppins font-bold text-xl relative left-16 mt-3 mb-3">Cloud technology</p>
+                                <p className="font-Poppins font-bold text-xl relative left-16 mt-3 mb-3 md:left-0">Cloud technology</p>
                                 <p className="text-base text-gray-300 md:p-2 rounded-xl relative md:top-2 md:text-justify w-[300px] h-[200px] text-justify">We streamline your journey to the cloud, offering seamless migration and comprehensive management services. From complex infrastructure transitions to optimizing existing cloud assets, we ensure a smooth and efficient process. Our agile, scalable, and secure cloud environments empower your business to innovate faster, reduce costs, and drive growth.</p>
                         </div>
                         <div className="mt-20">
-                                <Image src={ai} width={50} height={undefined} className="md:h-auto relative md:left-32 md:top-1 left-32" alt="AI"></Image>
-                                <p className="font-Poppins font-bold text-xl relative left-12 mt-3 mb-3">Artificial Intelligence</p>
-                                <p className="text-base text-gray-300 md:p-2 rounded-xl relative md:top-2 md:text-justify w-[300px] h-[200px] text-justify">Optimize Your Operations with Intelligent Automation. Our experts implement RPA solutions to automate repetitive tasks and complex workflows. By integrating seamlessly with your ERP systems, we boost efficiency, reduce errors, and drive cost savings. This allows your team to focus on strategic initiatives and deliver exceptional results.</p>
+                                <Image src={ai} width={50} height={undefined} className="md:h-auto relative md:left-32 md:-top-[70px] left-32" alt="AI"></Image>
+                                <p className="font-Poppins font-bold text-xl relative left-12 mt-3 mb-3 md:-top-16 md:-left-2">Artificial Intelligence</p>
+                                <p className="text-base text-gray-300 md:p-2 rounded-xl relative md:-top-16 md:text-justify w-[300px] h-[200px] text-justify ">Optimize Your Operations with Intelligent Automation. Our experts implement RPA solutions to automate repetitive tasks and complex workflows. By integrating seamlessly with your ERP systems, we boost efficiency, reduce errors, and drive cost savings. This allows your team to focus on strategic initiatives and deliver exceptional results.</p>
                         </div>
                         <div className="mt-20">
-                                <Image src={digital} width={50} height={undefined} className="h-[50px] relative md:left-32 md:top-3 left-32" alt="Digital transformation"></Image>
-                                <p className="font-Poppins font-bold md:text-xl relative md:top-5 text-center text-xl mt-3 mb-3 w-[300px]">Digital Transformation Consulting</p>
-                                <p className="text-base text-gray-300 md:p-2 rounded-xl relative md:top-2 md:text-justify w-[300px] h-[200px] text-justify ">Our seasoned experts dive deep into your specific challenges, providing tailored strategies to drive sustainable growth. Through in-depth evaluations and actionable insights, we empower you to make informed decisions and achieve measurable results.</p>
+                                <Image src={digital} width={50} height={undefined} className="h-[50px] relative md:left-32 left-32 md:-top-8" alt="Digital transformation"></Image>
+                                <p className="font-Poppins font-bold md:text-xl relative text-center text-xl mt-3 mb-3 w-[300px] md:-top-5">Digital Transformation Consulting</p>
+                                <p className="text-base text-gray-300 md:p-2 rounded-xl relative md:text-justify w-[300px] h-[200px] text-justify  md:-top-7">Our seasoned experts dive deep into your specific challenges, providing tailored strategies to drive sustainable growth. Through in-depth evaluations and actionable insights, we empower you to make informed decisions and achieve measurable results.</p>
                         </div>
                         <div className="mt-10">
                                 <Image src={mobile} width={50} height={undefined} className="md:h-50 relative left-32 top-1 m" alt="Mobile"></Image>
@@ -256,18 +258,18 @@ const Home = () => {
                     </div>
                 </section>
                 <section className="Latest Technologies">
-      <div className="w-screen bg-slate-200 h-[1250px] relative -top-80 md:h-screen">
+      <div className="w-screen bg-slate-200 h-[1280px] relative -top-80 md:h-[920px]">
         <div className="relative top-8 md:top-2">
-          <h1 className="text-[35px] font-Poppins text-black text-center font-bold uppercase relative top-3 md:text-[60px]">
+          <h1 className="text-[38px] font-Poppins text-black text-center font-bold uppercase relative top-3 md:text-[60px] -left-3">
             Using advanced
           </h1>
-          <h1 className="text-[35px] font-Poppins text-green-800 text-center font-bold uppercase relative top-3 md:text-[50px]">
+          <h1 className="text-[35px] font-Poppins text-green-800 text-center font-bold uppercase relative top-3 md:text-[50px] -left-3">
             technologies
           </h1>
-          <h1 className="text-[35px] font-Poppins text-black text-center font-bold uppercase relative top-3 md:text-[60px]">
+          <h1 className="text-[35px] font-Poppins text-black text-center font-bold uppercase relative top-3 md:text-[60px] -left-3">
             to maximise value.
           </h1>
-          <p className="ml-5 mr-5 text-center relative top-10 font-lato font-normal md:ml-10 md:top-8 md:font-bold md:text-xl">
+          <p className=" text-justify relative top-8 font-lato font-normal md:font-bold md:text-xl md:w-[90%] md:h-[45px] w-[90%] h-[140px] left-5 md:text-center md:mb-2 md:left-[1vh]">
             We deliver the highest level of customer service by deploying innovative and collaborative project management systems to build the most professional, robust, and highly scalable web & mobile solutions with the highest quality standards.
           </p>
           <div className="flex flex-col items-center justify-center md:flex md:flex-row md:items-center">
