@@ -21,7 +21,7 @@ body {
 
 ::-webkit-scrollbar-thumb {
     background-color: #888; /* Dark gray color for the thumb */
-    border-radius: 2px; /* Rounded corners for the thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
 }
 
 ::-webkit-scrollbar-thumb:hover {
