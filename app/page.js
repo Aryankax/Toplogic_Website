@@ -25,13 +25,24 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
     const [countBool, setCountBool] = useState(false);
-    const [isClient, setIsClient] = useState(false);  // State to check if we're on the client side
+    const [isClient, setIsClient] = useState(false); 
+
+    const [isAi, setAi] = useState(false);
+    const [isBlockChain, setBlockChain] = useState(false);
+    const [isIOT, setIOT] = useState(false);
+    const [isBigData, setBigData] = useState(false);
+    const [isCloud, setCloud] = useState(false);
+
     const statsRef = useRef(null);
     const industryRef = useRef(null);
-
     const apiKey = process.env.NEXT_PUBLIC_API_KEY;
 
-    // Ensure we're on the client side before rendering CountUp
+    const [selectedTech, setSelectedTech] = useState(null);
+
+    const toggleContent = (tech) => {
+        setSelectedTech(tech);
+    };
+
     useEffect(() => {
             setIsClient(true); 
             const Tawk_API = window.Tawk_API || {}, Tawk_LoadStart = new Date();
@@ -230,7 +241,7 @@ const Home = () => {
                 <section className="services">
                     <h1 className="text-[40px] font-lato text-white text-center font-extrabold  uppercase relative -top-[380px] md:text-[70px]">Services</h1>
                     <h1 className="text-green-700 text-lg font-lato font-bold relative -top-[380px]  text-center md:text-[25px]">Where Ideas Transform into <span className="text-white">Digital Excellence</span>.</h1>
-                    <div className="relative -top-[350px] ml-1 md:flex md:flex-row md:flex-wrap md:left-28">
+                    <div className="relative -top-[350px] ml-2 md:flex md:flex-row md:flex-wrap md:left-28">
                         <ServicesCard ServiceName={"Web Development"} ImgSrc={webDev} TitleSize={"xl"}></ServicesCard>
                         <ServicesCard ServiceName={"App Development"} ImgSrc={appDev} TitleSize={"xl"}></ServicesCard>
                         <ServicesCard ServiceName={"Software Development"} ImgSrc={software} TitleSize={"xl"}></ServicesCard>
@@ -239,6 +250,99 @@ const Home = () => {
                         <ServicesCard ServiceName={"SEO"} ImgSrc={seo} TitleSize={"xl"}></ServicesCard>
                     </div>
                 </section>
+                <section className="Latest Technologies">
+      <div className="w-screen bg-slate-200 h-[1250px] relative -top-80">
+        <div className="relative top-8">
+          <h1 className="text-[35px] font-Poppins text-black text-center font-bold uppercase relative top-3 md:text-[70px]">
+            Using advanced
+          </h1>
+          <h1 className="text-[35px] font-Poppins text-green-800 text-center font-bold uppercase relative top-3 md:text-[70px]">
+            technologies
+          </h1>
+          <h1 className="text-[35px] font-Poppins text-black text-center font-bold uppercase relative top-3 md:text-[70px]">
+            to maximise value.
+          </h1>
+          <p className="ml-5 mr-5 text-center relative top-10 font-lato font-normal">
+            We deliver the highest level of customer service by deploying innovative and collaborative project management systems to build the most professional, robust, and highly scalable web & mobile solutions with the highest quality standards.
+          </p>
+          <div className="relative bg-green-800 w-[350px] h-[400px] left-[20px] top-16 overflow-y-auto">
+            <ol className="relative ml-5 mt-5 text-2xl flex flex-col gap-14 text-white font-bold mb-5">
+              <li className="border-b pb-4" onClick={() => toggleContent('ai')}>
+                1. Artificial Intelligence
+              </li>
+              <li className="border-b pb-4" onClick={() => toggleContent('blockchain')}>
+                2. Blockchain
+              </li>
+              <li className="border-b pb-4" onClick={() => toggleContent('iot')}>
+                3. Internet of Things
+              </li>
+              <li className="border-b pb-4" onClick={() => toggleContent('big-data')}>
+                4. Big Data & Analytics
+              </li>
+              <li className="border-b pb-4" onClick={() => toggleContent('cloud-computing')}>
+                5. Cloud Computing
+              </li>
+            </ol>
+          </div>
+          <div className="tech-content relative mt-16 ml-5 bg-gray-300 w-[350px] h-[420px] rounded-xl">
+            {selectedTech === 'ai' && (
+              <>
+                <p className="font-Poppins font-bold text-black text-4xl relative top-10 left-5">
+                  Artificial Intelligence
+                </p>
+                <p className="font-Poppins font-normal text-black text-base relative top-10 left-5 mt-5 mr-8">
+                  Toplogic is a forward-thinking IT company specializing in AI and ML solutions that help businesses harness the power of data to drive innovation and efficiency. By integrating advanced algorithms, Toplogic offers tailored AI/ML services that enhance automation, predictive analytics, and decision-making, ensuring businesses stay competitive in a rapidly evolving market.
+                </p>
+              </>
+            )}
+
+            {selectedTech === 'blockchain' && (
+              <>
+                <p className="font-Poppins font-bold text-black text-4xl relative top-10 left-5">
+                  Blockchain
+                </p>
+                <p className="font-Poppins font-normal text-black text-base relative top-10 left-5 mt-5 mr-8">
+                  Toplogic is a leading IT company providing innovative blockchain solutions that enable businesses to enhance security, transparency, and efficiency. With expertise in blockchain technology, Toplogic helps companies develop decentralized applications and smart contracts, ensuring secure transactions and streamlined operations while driving digital transformation.
+                </p>
+              </>
+            )}
+
+            {selectedTech === 'iot' && (
+              <>
+                <p className="font-Poppins font-bold text-black text-4xl relative top-10 left-5">
+                  Internet Of Things
+                </p>
+                <p className="font-Poppins font-normal text-black text-base relative top-10 left-5 mt-5 mr-8">
+                Toplogic provides innovative IoT solutions that connect devices, enabling businesses to gather real-time data and enhance operational efficiency. Our IoT services drive smarter decision-making and innovation, improving customer experiences across industries like smart homes, healthcare, and manufacturing.
+                </p>
+              </>
+            )}
+
+            {selectedTech === 'big-data' && (
+              <>
+                <p className="font-Poppins font-bold text-black text-4xl relative top-10 left-5">
+                  Big Data and Analytics
+                </p>
+                <p className="font-Poppins font-normal text-black text-base relative top-10 left-5 mt-5 mr-8">
+                Toplogic offers advanced Big Data solutions that help businesses harness large volumes of data to uncover insights, optimize processes, and drive growth. Our services enable better decision-making through data analytics, predictive modeling, and real-time insights, empowering businesses to stay competitive in a data-driven world.
+                </p>
+              </>
+            )}
+
+            {selectedTech === 'cloud-computing' && (
+              <>
+                <p className="font-Poppins font-bold text-black text-4xl relative top-10 left-3">
+                  Cloud Computing
+                </p>
+                <p className="font-Poppins font-normal text-black text-base relative top-10 left-5 mt-5 mr-8">
+                Toplogic provides innovative cloud computing solutions that enable businesses to scale efficiently, enhance collaboration, and reduce operational costs. Our cloud services offer secure, flexible, and cost-effective infrastructure, empowering businesses to optimize performance and drive digital transformation.
+                </p>
+              </>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
             </div>
         </>
     );
