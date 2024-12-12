@@ -62,18 +62,18 @@ const Home = () => {
             onLeaveBack: () => setCountBool(false),
         });
 
-        gsap.to(industryRef.current, {
-            x: "-1560px",
-            scrollTrigger: {
-                trigger: "#industries",
-                scroller: "body",
-                markers: false,
-                start: "top 20%",
-                end: "top -560%",
-                scrub: 2,
-                pin: true
-            }
-        })
+        // gsap.to(industryRef.current, {
+        //     x: "-1560px",
+        //     scrollTrigger: {
+        //         trigger: "#industries",
+        //         scroller: "body",
+        //         markers: false,
+        //         start: "top 20%",
+        //         end: "top -560%",
+        //         scrub: 2,
+        //         pin: true
+        //     }
+        // })
 
         return () => {
             trigger.kill();
@@ -82,7 +82,7 @@ const Home = () => {
 
     return (
         <>
-            <div className="relative bg-black min-h-screen overflow-x-hidden overflow-y-hidden">
+            <div className="relative bg-black min-h-screen overflow-x-hidden overflow-y-hidden sm:overflow-x-scroll">
                 <div className="fixed top-0 left-0 right-0 z-50">
                     <Navbar />
                 </div>
@@ -110,7 +110,7 @@ const Home = () => {
                     <p className="font-Poppins font-bold text-green-500 relative md:left-20 md:top-[270px] md:text-[100px] uppercase transition-colors duration-300 hover:text-green-300 left-3 top-56 text-[40px]">
                         It Solutions.
                     </p>
-                    <div className="md:w-[800px] h-full md:top-[250px] md:p-1 text-justify md:ml-[80px] md:mt-2 flex mt-60 ml-3 mr-2 relative">
+                    <div className="md:w-[800px] h-full md:top-[250px] md:p-2 text-justify md:ml-[80px] md:mt-2 flex mt-60 ml-3 mr-6 relative">
                         <p className="font-Poppins text-[18px]">
                             Toplogic Softlabs is at the forefront of innovation, delivering cutting-edge IT solutions that are transforming industries. With a focus on excellence and sustainability, we provide tailor-made technology services designed to streamline operations, enhance efficiency, and drive growth. We are committed to revolutionizing the digital landscape, ensuring our clients stay ahead in the fast-paced world of technology.
                         </p>
@@ -211,7 +211,7 @@ const Home = () => {
                         <h1 className="text-center font-Poppins font-extrabold md:text-[70px] relative md:top-1 uppercase text-[40px] top-2">Industries</h1>
                         <h1 className="text-green-800 text-sm font-lato font-bold relative  text-center md:text-[25px] md:-top-3">Where Ideas Transform into <span className="text-black">Digital Excellence</span>.</h1>
                         <div className="relative max-w-full px-10 top-12 md:top-4" id="industryScrollContainer" ref={industryRef}>
-            <div className="flex gap-12 pb-6 translate-x-10" id="horizontal-container">
+            <div className="flex gap-12 pb-6 overflow-auto" id="horizontal-container">
                 <IndustryDiv Name={"Automotive"} imageSrc={"automotive.jpg"}></IndustryDiv>
                 <IndustryDiv Name={"Real Estate"} imageSrc={"real-estate.jpg"}></IndustryDiv>
                 <IndustryDiv Name={"Health Care"} imageSrc={"healthcare.jpg"}></IndustryDiv>
