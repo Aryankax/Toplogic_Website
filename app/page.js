@@ -37,7 +37,7 @@ const Home = () => {
     const industryRef = useRef(null);
     const apiKey = process.env.NEXT_PUBLIC_API_KEY;
 
-    const [selectedTech, setSelectedTech] = useState(null);
+    const [selectedTech, setSelectedTech] = useState("ai");
 
     const toggleContent = (tech) => {
         setSelectedTech(tech);
