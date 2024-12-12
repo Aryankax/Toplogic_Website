@@ -251,21 +251,21 @@ const Home = () => {
                     </div>
                 </section>
                 <section className="Latest Technologies">
-      <div className="w-screen bg-slate-200 h-[1250px] relative -top-80">
-        <div className="relative top-8">
-          <h1 className="text-[35px] font-Poppins text-black text-center font-bold uppercase relative top-3 md:text-[70px]">
+      <div className="w-screen bg-slate-200 h-[1250px] relative -top-80 md:h-[850px]">
+        <div className="relative top-8 md:top-2">
+          <h1 className="text-[35px] font-Poppins text-black text-center font-bold uppercase relative top-3 md:text-[60px]">
             Using advanced
           </h1>
-          <h1 className="text-[35px] font-Poppins text-green-800 text-center font-bold uppercase relative top-3 md:text-[70px]">
+          <h1 className="text-[35px] font-Poppins text-green-800 text-center font-bold uppercase relative top-3 md:text-[50px]">
             technologies
           </h1>
-          <h1 className="text-[35px] font-Poppins text-black text-center font-bold uppercase relative top-3 md:text-[70px]">
+          <h1 className="text-[35px] font-Poppins text-black text-center font-bold uppercase relative top-3 md:text-[60px]">
             to maximise value.
           </h1>
-          <p className="ml-5 mr-5 text-center relative top-10 font-lato font-normal">
+          <p className="ml-5 mr-5 text-center relative top-10 font-lato font-normal md:ml-10 md:top-5 md:font-bold md:text-lg">
             We deliver the highest level of customer service by deploying innovative and collaborative project management systems to build the most professional, robust, and highly scalable web & mobile solutions with the highest quality standards.
           </p>
-          <div className="relative bg-green-800 w-[350px] h-[400px] left-[20px] top-16 overflow-y-auto">
+          <div className="relative bg-green-800 w-[350px] h-[400px] left-[20px] top-16 overflow-y-auto md:ml-[50px] md:w-[600px] md:rounded-xl">
             <ol className="relative ml-5 mt-5 text-2xl flex flex-col gap-14 text-white font-bold mb-5">
               <li className="border-b pb-4" onClick={() => toggleContent('ai')}>
                 1. Artificial Intelligence
@@ -284,7 +284,7 @@ const Home = () => {
               </li>
             </ol>
           </div>
-          <div className="tech-content relative mt-16 ml-5 bg-gray-300 w-[350px] h-[420px] rounded-xl">
+          <div className="tech-content relative mt-16 ml-5 bg-gray-300 w-[350px] h-[420px] rounded-xl md:relative md:-top-[400px] md:left-[600px] md:z-20 md:h-[400px] md:w-[600px]">
             {selectedTech === 'ai' && (
               <>
                 <p className="font-Poppins font-bold text-black text-4xl relative top-10 left-5">
