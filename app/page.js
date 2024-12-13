@@ -187,12 +187,12 @@ const Home = () => {
 
                 <section className="relative md:top-20 md:left-14 top-10 left-10 w-screen md:h-[1390px] h-[2800px] overflow-x-auto">
                     <div className="md:flex md:flex-col md:items-center md:relative md:-left-[370px]">
-                    <h1 className="text-white uppercase font-Poppins font-extrabold md:text-5xl text-5xl md:relative md:-left-2">Elevate Your</h1>
+                    <h1 className="text-white uppercase font-Poppins font-extrabold md:text-5xl text-5xl md:relative md:-left-[90px]">Elevate Your</h1>
                     <h1 className="text-white uppercase font-Poppins font-extrabold md:text-5xl text-4xl md:relative md:-left-20">Business With</h1>
                     <h1 className="text-white uppercase font-Poppins font-extrabold md:text-5xl text-3xl">Digital <span className="text-green-800">innovation</span>.</h1>
                     </div>
                     <div className="flex flex-col items-center relative -left-10 top-5 md:-left-96">
-                    <div className="md:w-[500px] relative md:top-8 w-[300px] text-justify top-2">
+                    <div className="md:w-[500px] relative md:top-8 w-[300px] text-justify top-2 md:left-1">
                         <p className="text-gray-300 md:text-lg">At <span className="text-white font-bold">Toplogic Softlabs</span>, we excel in delivering world-class <span className="text-white font-bold">digital transformation consulting services</span> tailored to bridge the gap between <span className="text-white font-bold">business strategies and innovation</span>. Our team of experts specializes in reimagining business processes by integrating <span className="text-white font-bold">cutting-edge digital technologies</span> that empower enterprises to embrace modern digital ecosystems.
                         <span className="text-white font-bold"> Unlike one-size-fits-all solutions</span>, <span className="text-white font-bold">our approach focuses on developing a customized digital transformation framework</span>. We meticulously analyze your existing operating models and align them with <span className="font-bold text-white">industry-leading practices</span> to ensure seamless adaptation. Our consultants help businesses of all sizes—from <span className="font-bold text-white">startups to established industry leaders</span>—strategize and invest in open, <span className="font-bold text-white">scalable technologies</span> that <span className="text-white font-bold">elevate customer experiences</span>.
                         By <span className="text-white font-bold">leveraging automation, data-driven insights, and streamlined operations</span>, Toplogic Softlabs ensures your business stays ahead in the digital age. Unlock the potential of digital innovation with solutions designed to enhance <span className="text-white font-bold">efficiency</span>, <span className="text-white font-bold">agility</span>, and <span className="text-white font-bold">competitive advantage</span>.
@@ -263,31 +263,34 @@ const Home = () => {
           <h1 className="text-[38px] font-Poppins text-black text-center font-bold uppercase relative top-3 md:text-[60px] -left-3">
             Using advanced
           </h1>
-          <h1 className="text-[35px] font-Poppins text-green-800 text-center font-bold uppercase relative top-3 md:text-[50px] -left-3">
+          <h1 className="text-[35px] font-Poppins text-green-800 text-center font-bold uppercase relative top-3 md:text-[60px] -left-3">
             technologies
           </h1>
           <h1 className="text-[35px] font-Poppins text-black text-center font-bold uppercase relative top-3 md:text-[60px] -left-3">
             to maximise value.
           </h1>
-          <p className=" text-justify relative top-8 font-lato font-normal md:font-bold md:text-xl md:w-[90%] md:h-[45px] w-[90%] h-[140px] left-5 md:text-center md:mb-2 md:left-[1vh]">
+          <p className=" text-justify relative top-8 font-lato font-normal md:font-bold md:text-xl md:w-[90%] md:h-[45px] w-[90%] h-[140px] left-5 md:text-center md:mb-2 md:left-[8vh]">
             We deliver the highest level of customer service by deploying innovative and collaborative project management systems to build the most professional, robust, and highly scalable web & mobile solutions with the highest quality standards.
           </p>
           <div className="flex flex-col items-center justify-center md:flex md:flex-row md:items-center">
           <div className="relative bg-green-800 w-[80%] h-[400px] top-16 overflow-y-auto md:w-[40%] md:rounded-xl rounded-t-xl">
             <ol className="relative ml-5 mt-5 text-2xl flex flex-col gap-14 text-white font-bold mb-5">
-              <li className="border-b pb-4" onClick={() => toggleContent('ai')}>
-                1. Artificial Intelligence
-              </li>
-              <li className="border-b pb-4" onClick={() => toggleContent('blockchain')}>
+            <li 
+  className={`border-b pb-4 ${selectedTech === "ai" ? "text-green-400" : "text-white"}`} 
+  onClick={() => toggleContent('ai')}
+>
+  1. Artificial Intelligence
+</li>
+              <li className={`border-b pb-4 ${selectedTech === "blockchain" ? "text-green-400" : "text-white"}`} onClick={() => toggleContent('blockchain')}>
                 2. Blockchain
               </li>
-              <li className="border-b pb-4" onClick={() => toggleContent('iot')}>
+              <li className={`border-b pb-4 ${selectedTech === "iot" ? "text-green-400" : "text-white"}`} onClick={() => toggleContent('iot')}>
                 3. Internet of Things
               </li>
-              <li className="border-b pb-4" onClick={() => toggleContent('big-data')}>
+              <li className={`border-b pb-4 ${selectedTech === "big-data" ? "text-green-400" : "text-white"}`} onClick={() => toggleContent('big-data')}>
                 4. Big Data & Analytics
               </li>
-              <li className="border-b pb-4" onClick={() => toggleContent('cloud-computing')}>
+              <li className={`border-b pb-4 ${selectedTech === "cloud-computing" ? "text-green-400" : "text-white"}`} onClick={() => toggleContent('cloud-computing')}>
                 5. Cloud Computing
               </li>
             </ol>
