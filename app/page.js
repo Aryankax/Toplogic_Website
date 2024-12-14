@@ -18,6 +18,8 @@ import aiml from "../images/ai3.png";
 import software from "../images/software-dev.png";
 import devops from "../images/devops.png";
 import seo from "../images/seo.png";
+import employee from "../images/employee.png";
+import Commitment from "@/components/commitment";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -258,7 +260,7 @@ const Home = () => {
                     </div>
                 </section>
                 <section className="Latest Technologies">
-      <div className="w-screen bg-slate-200 h-[1280px] relative -top-80 md:h-[920px]">
+      <div className="w-screen bg-slate-200 h-[1380px] relative -top-80 md:h-[920px]">
         <div className="relative top-8 md:top-2">
           <h1 className="text-[38px] font-Poppins text-black text-center font-bold uppercase relative top-3 md:text-[60px] -left-3">
             Using advanced
@@ -295,64 +297,87 @@ const Home = () => {
               </li>
             </ol>
           </div>
-          <div className="tech-content relative mt-16 bg-gray-300 w-[80%] h-[440px] md:relative md:w-[40%] md:z-20 md:h-[400px] rounded-b-xl md:rounded-xl md:top-8">
+          <div className="tech-content relative mt-16 bg-gray-300 w-[80%] h-[550px] md:relative md:w-[40%] md:z-20 md:h-[400px] rounded-b-xl md:rounded-xl md:top-8">
             {selectedTech === 'ai' && (
               <>
-                <p className="font-Poppins font-bold text-black text-4xl relative top-10 left-5">
+                <p className="font-Poppins font-bold text-green-700 text-4xl relative top-10 left-5">
                   Artificial Intelligence
                 </p>
-                <p className="font-Poppins font-normal text-black text-base relative top-10 left-5 mt-5 mr-8">
+                <p className="font-Poppins font-normal text-black text-base relative top-10 left-5 mt-5 mr-10 p-2 text-justify">
                   Toplogic is a forward-thinking IT company specializing in AI and ML solutions that help businesses harness the power of data to drive innovation and efficiency. By integrating advanced algorithms, Toplogic offers tailored AI/ML services that enhance automation, predictive analytics, and decision-making, ensuring businesses stay competitive in a rapidly evolving market.
                 </p>
+                <button className="md:relative md:left-6 md:top-20 md:bg-green-700 rounded-3xl md:w-44 md:h-10 md:font-Poppins md:text-lg md:text-white md:hover:bg-green-600 md:duration-300 md:transition-colors w-44 bg-green-700 h-10 relative top-16 left-5 text-white font-Poppins text-lg">Explore More</button>
               </>
             )}
 
             {selectedTech === 'blockchain' && (
               <>
-                <p className="font-Poppins font-bold text-black text-4xl relative top-10 left-5">
+                <p className="font-Poppins font-bold text-green-700 text-4xl relative top-10 left-5">
                   Blockchain
                 </p>
-                <p className="font-Poppins font-normal text-black text-base relative top-10 left-5 mt-5 mr-8">
+                <p className="font-Poppins font-normal text-black text-base relative top-10 left-5 mt-5 mr-10 p-2 text-justify">
                   Toplogic is a leading IT company providing innovative blockchain solutions that enable businesses to enhance security, transparency, and efficiency. With expertise in blockchain technology, Toplogic helps companies develop decentralized applications and smart contracts, ensuring secure transactions and streamlined operations while driving digital transformation.
                 </p>
+                <button className="md:relative md:left-6 md:top-20 md:bg-green-700 rounded-3xl md:w-44 md:h-10 md:font-Poppins md:text-lg md:text-white md:hover:bg-green-600 md:duration-300 md:transition-colors w-44 bg-green-700 h-10 relative top-16 left-5 text-white font-Poppins text-lg">Explore More</button>
               </>
             )}
 
             {selectedTech === 'iot' && (
               <>
-                <p className="font-Poppins font-bold text-black text-4xl relative top-10 left-5">
+                <p className="font-Poppins font-bold text-green-700 md:text-4xl text-3xl relative top-10 left-5">
                   Internet Of Things
                 </p>
-                <p className="font-Poppins font-normal text-black text-base relative top-10 left-5 mt-5 mr-8">
+                <p className="font-Poppins font-normal text-black text-base relative top-10 left-5 mt-5 mr-10 p-2 text-justify">
                 Toplogic provides innovative IoT solutions that connect devices, enabling businesses to gather real-time data and enhance operational efficiency. Our IoT services drive smarter decision-making and innovation, improving customer experiences across industries like smart homes, healthcare, and manufacturing.
                 </p>
+                <button className="md:relative md:left-6 md:top-20 md:bg-green-700 rounded-3xl md:w-44 md:h-10 md:font-Poppins md:text-lg md:text-white md:hover:bg-green-600 md:duration-300 md:transition-colors w-44 bg-green-700 h-10 relative top-16 left-5 text-white font-Poppins text-lg">Explore More</button>
               </>
             )}
 
             {selectedTech === 'big-data' && (
               <>
-                <p className="font-Poppins font-bold text-black text-4xl relative top-10 left-5">
+                <p className="font-Poppins font-bold text-green-700 text-4xl relative top-10 left-5">
                   Big Data and Analytics
                 </p>
-                <p className="font-Poppins font-normal text-black text-base relative top-10 left-5 mt-5 mr-8">
+                <p className="font-Poppins font-normal text-black text-base relative top-10 left-5 mt-5 mr-10 p-2 text-justify">
                 Toplogic offers advanced Big Data solutions that help businesses harness large volumes of data to uncover insights, optimize processes, and drive growth. Our services enable better decision-making through data analytics, predictive modeling, and real-time insights, empowering businesses to stay competitive in a data-driven world.
                 </p>
+                <button className="md:relative md:left-6 md:top-20 md:bg-green-700 rounded-3xl md:w-44 md:h-10 md:font-Poppins md:text-lg md:text-white md:hover:bg-green-600 md:duration-300 md:transition-colors w-44 bg-green-700 h-10 relative top-16 left-5 text-white font-Poppins text-lg">Explore More</button>
               </>
             )}
 
             {selectedTech === 'cloud-computing' && (
               <>
-                <p className="font-Poppins font-bold text-black text-4xl relative top-10 left-3">
+                <p className="font-Poppins font-bold text-green-700 md:text-4xl text-3xl relative top-10 left-5 ">
                   Cloud Computing
                 </p>
-                <p className="font-Poppins font-normal text-black text-base relative top-10 left-5 mt-5 mr-8">
+                <p className="font-Poppins font-normal text-black text-base relative top-10 left-5 mt-5 mr-10 p-2 text-justify">
                 Toplogic provides innovative cloud computing solutions that enable businesses to scale efficiently, enhance collaboration, and reduce operational costs. Our cloud services offer secure, flexible, and cost-effective infrastructure, empowering businesses to optimize performance and drive digital transformation.
                 </p>
+                <button className="md:relative md:left-6 md:top-20 md:bg-green-700 rounded-3xl md:w-44 md:h-10 md:font-Poppins md:text-lg md:text-white md:hover:bg-green-600 md:duration-300 md:transition-colors w-44 bg-green-700 h-10 relative top-16 left-5 text-white font-Poppins text-lg">Explore More</button>
               </>
             )}
           </div>
           </div>
         </div>
+      </div>
+    </section>
+    <section className="Commitment and Guarantee">
+      <div className="w-screen h-[1700px] relative -top-80">
+              <div className="">
+                <h1 className="text-white uppercase w-[350px] font-lato font-extrabold text-3xl relative top-20 left-6">Our Commitment & <span className="text-green-700">Guarantee</span></h1>
+                <p className="text-slate-200 text-justify relative top-20 ml-6 mt-3 font-Poppins text-lg mr-6">Toplogic delivers robust, scalable and high performance software, web and mobile app development services to help you harness the power of technology, consulting and maximize your online business investment.</p>
+              </div>
+
+            <img className="w-20 h-20 relative top-[150px] ml-4" src="employee.png"></img>
+            <h1 className="text-green-700 relative top-[150px] text-3xl font-Poppins ml-6 mb-4 mt-4 text-justify font-bold">100% Transparency</h1>
+            <p className="text-white relative top-36 text-justify ml-6 mr-6 font-Poppins">At Toplogic, we believe in complete transparency with our clients and we keep them fully updated during the entire development production cycle.</p>
+
+            <Commitment title={"95% ONTIME DELIVERY"} description={"Our pursuit of agile development methodology have resulted in an enviable 95% on-time delivery track record for the past 20+ years of our operations."} imageSRC={"time.png"}></Commitment>
+
+            <Commitment title={"30 DAYS FREE SUPPORT"} description={"We take complete responsibility of our work and provide free 30 days support to all our customer even after the software / mobile app has been launched."} imageSRC={"support.png"}></Commitment>
+
+            <Commitment title={"FLEXIBLE ENGAGEMENTS"} description={"Toplogic offers tailor-made engagement models, hand crafted to meet the exact requirements of clients with diverse business needs"} imageSRC={"engagement.png"}></Commitment>
       </div>
     </section>
             </div>
