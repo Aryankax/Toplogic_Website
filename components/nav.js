@@ -4,9 +4,12 @@ import Image from "next/image";
 import logo from "../images/Toplogic.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
     const [isMenuOpen, setMenuOpen] = useState(false);
+
+    const router = useRouter();
 
     // Toggle menu visibility
     const toggleMenu = () => setMenuOpen(!isMenuOpen);
@@ -30,11 +33,11 @@ const Navbar = () => {
                 <div className="relative hidden md:flex md:items-center md:text-base md:gap-4 md:ml-64 lg:ml-80 xl:ml-[32rem] 2xl:ml-[36rem]"
   id="navButtons"
 >
-                <button className="hover:text-green-800 navButton hover:border-b-4 hover:border-green-800 transition-all">ABOUT US</button>
-                <button className="hover:text-green-800 navButton hover:border-b-4 hover:border-green-800 transition-all">SERVICES</button>
-                <button className="hover:text-green-800 navButton hover:border-b-4 hover:border-green-800 transition-all">INDUSTRIES</button>
-                <button className="hover:text-green-800 navButton hover:border-b-4 hover:border-green-800 transition-all">PROJECTS</button>
-                <button className="hover:text-green-800 navButton hover:border-b-4 hover:border-green-800 transition-all">CONTACT US</button>
+                <button className="hover:text-green-800 navButton hover:border-b-4 hover:border-green-800 transition-all" onClick={() => router.push("/about-us")}>ABOUT US</button>
+                <button className="hover:text-green-800 navButton hover:border-b-4 hover:border-green-800 transition-all" onClick={() => router.push("/services")}>SERVICES</button>
+                <button className="hover:text-green-800 navButton hover:border-b-4 hover:border-green-800 transition-all" onClick={() => router.push("/industries")}>INDUSTRIES</button>
+                <button className="hover:text-green-800 navButton hover:border-b-4 hover:border-green-800 transition-all" onClick={() => router.push("/projects")}>PROJECTS</button>
+                <button className="hover:text-green-800 navButton hover:border-b-4 hover:border-green-800 transition-all" onClick={() => router.push("/contact-us")}>CONTACT US</button>
             </div>
             </div>
 
@@ -56,27 +59,27 @@ const Navbar = () => {
                 >
                     <button
                         className="text-white text-2xl hover:text-green-800 transition-all uppercase" 
-                    >
+                        onClick={() => router.push("/about-us")}>
                         About Us
                     </button>
                     <button
                         className="text-white text-2xl hover:text-green-800 transition-all uppercase"
-                    >
+                        onClick={() => router.push("/services")}>
                         Services
                     </button>
                     <button
                         className="text-white text-2xl hover:text-green-800 transition-all uppercase"
-                    >
+                        onClick={() => router.push("/industries")}>
                         Industries
                     </button>
                     <button
                         className="text-white text-2xl hover:text-green-800 transition-all uppercase"
-                    >
+                         onClick={() => router.push("/projects")}>
                         Projects
                     </button>
                     <button
                         className="text-white text-2xl hover:text-green-800 transition-all uppercase"
-                    >
+                        onClick={() => router.push("/contact-us")}>
                         Contact Us
                     </button>
                 </div>
