@@ -25,8 +25,8 @@ const Navbar = () => {
         <nav className="text-white border-b border-l-0 border-t-0 border-r-0 bg-black p-4 justify-between items-center relative flex">
             {/* Logo Section */}
             <div className="flex items-center md:relative">
-                <Image alt="logo" src={logo} width={100} height={undefined}></Image>
-                <div className="">
+                <Image alt="logo" src={logo} width={100} height={undefined} className="hover:cursor-pointer" onClick={() => router.push("/")}></Image>
+                <div className="hover:cursor-pointer" onClick={() => router.push("/")}>
                     <p className="font-lato text-3xl uppercase font-bold">Toplogic</p>
                     <p className="font-lato text-3xl uppercase font-medium md:font-bold text-center md:absolute md:top-[32px] md:left-64">Softlabs</p>
                 </div>
