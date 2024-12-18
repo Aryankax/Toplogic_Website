@@ -94,7 +94,7 @@ const Home = () => {
 
     return (
         <>
-            <div className="relative bg-black min-h-screen overflow-x-hidden   sm:overflow-x-scroll w-screen">
+            <div className="relative bg-black min-h-screen overflow-x-hidden sm:overflow-x-scroll w-screen md:overflow-x-hidden xl:overflow-x-hidden">
                 <div className="fixed top-0 left-0 right-0 z-50">
                     <Navbar />
                 </div>
@@ -187,7 +187,7 @@ const Home = () => {
                     </div>
                 </section>
 
-                <section className="relative md:top-20 md:left-14 top-10 left-10 w-screen md:h-[1390px] h-[2800px] overflow-x-auto">
+                <section className="relative md:top-20 md:left-14 top-10 left-10 w-screen md:h-[1390px] h-[2800px] md:overflow-y-hidden">
                     <div className="md:flex md:flex-col md:items-center md:relative md:-left-[370px]">
                     <h1 className="text-white uppercase font-Poppins font-extrabold md:text-5xl text-5xl md:relative md:-left-[90px]">Elevate Your</h1>
                     <h1 className="text-white uppercase font-Poppins font-extrabold md:text-5xl text-4xl md:relative md:-left-20">Business With</h1>
@@ -230,17 +230,17 @@ const Home = () => {
                         <h1 className="text-green-800 text-sm font-lato font-bold relative  text-center md:text-[25px] md:-top-3">Where Ideas Transform into <span className="text-black">Digital Excellence</span>.</h1>
                         <div className="relative max-w-full px-10 top-12 md:top-4" id="industryScrollContainer" ref={industryRef}>
             <div className="flex gap-12 pb-6 overflow-auto" id="horizontal-container">
-                <IndustryDiv Name={"Automotive"} imageSrc={"automotive.jpg"}></IndustryDiv>
-                <IndustryDiv Name={"Real Estate"} imageSrc={"real-estate.jpg"}></IndustryDiv>
-                <IndustryDiv Name={"Health Care"} imageSrc={"healthcare.jpg"}></IndustryDiv>
-                <IndustryDiv Name={"E-commerce"} imageSrc={"ecommerce.jpg"}></IndustryDiv>
-                <IndustryDiv Name={"Transportation"} imageSrc={"transportation.jpg"}></IndustryDiv>
-                <IndustryDiv Name={"Manufacturing"} imageSrc={"manufacturing.jpg"}></IndustryDiv>
-                <IndustryDiv Name={"Software Dev"} imageSrc={"software-dev.jpg"}></IndustryDiv>
-                <IndustryDiv Name={"Education"} imageSrc={"education.jpg"}></IndustryDiv>
-                <IndustryDiv Name={"Fintech"} imageSrc={"fintech.jpg"}></IndustryDiv>
-                <IndustryDiv Name={"Travel & Tourism"} imageSrc={"tourism.jpg"}></IndustryDiv>
-                <IndustryDiv Name={"Entertainment"} imageSrc={"netflix.jpg"}></IndustryDiv>
+                <IndustryDiv Name={"Automotive"} imageSrc={"automotive.jpg"} linkName={"automotive"}></IndustryDiv>
+                <IndustryDiv Name={"Real Estate"} imageSrc={"real-estate.jpg"} linkName={"real-estate"}></IndustryDiv>
+                <IndustryDiv Name={"Health Care"} imageSrc={"healthcare.jpg"} linkName={"healthcare"}></IndustryDiv>
+                <IndustryDiv Name={"E-commerce"} imageSrc={"ecommerce.jpg"} linkName={"e-commerce"}></IndustryDiv>
+                <IndustryDiv Name={"Transportation"} imageSrc={"transportation.jpg"} linkName={"transportation"}></IndustryDiv>
+                <IndustryDiv Name={"Manufacturing"} imageSrc={"manufacturing.jpg"} linkName={"manufacturing"}></IndustryDiv>
+                <IndustryDiv Name={"Software Vendors"} imageSrc={"software-dev.jpg"} linkName={"software-vendors"}></IndustryDiv>
+                <IndustryDiv Name={"Education"} imageSrc={"education.jpg"} linkName={"education"}></IndustryDiv>
+                <IndustryDiv Name={"Fintech"} imageSrc={"fintech.jpg"} linkName={"fintech"}></IndustryDiv>
+                <IndustryDiv Name={"Travel & Tourism"} imageSrc={"tourism.jpg"} linkName={"travel-and-tourism"}></IndustryDiv>
+                <IndustryDiv Name={"Entertainment"} imageSrc={"netflix.jpg"} linkName={"entertainment"}></IndustryDiv>
                 </div>
                 </div>
                 </div>

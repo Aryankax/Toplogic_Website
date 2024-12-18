@@ -9,8 +9,17 @@ module.exports = {
     './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {},
-   
+    extend: {
+      keyframes: {
+        colorShift: {
+          "0%, 100%": { color: "#16a34a" }, // green-600
+          "50%": { color: "#ffffff" }, // white
+        },
+      },
+      animation: {
+        colorShift: "colorShift 15s infinite ease-in-out",
+      },
+    },
     fontFamily: {
       lato: ["Lato", "sans-serif"],
       Roboto: ["Roboto", "sans-serif"],

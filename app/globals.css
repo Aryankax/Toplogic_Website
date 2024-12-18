@@ -10,7 +10,7 @@
 /* Hide horizontal scrollbar and only show vertical scrollbar */
 body {
     background-color: black;
-    overflow-x: hidden; 
+    overflow-x: hidden;
     overflow-y: scroll;
 }
 
