@@ -23,7 +23,7 @@ const FAQ = () => {
   };
 
   return (
-    <div className="max-w-5xl mx-auto p-6 relative">
+    <div className="md:max-w-5xl mx-auto relative md:-top-28 max-w-[300px] top-10">
       <div className="space-y-4">
         {faqs.map((faq, index) => (
           <div key={index} className="border border-gray-500 rounded-lg overflow-hidden">

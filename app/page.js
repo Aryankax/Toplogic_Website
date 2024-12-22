@@ -401,7 +401,7 @@ const Home = () => {
             <img src="/ssa_background.png" className="md:w-[150px] md:h-[150px] md:ml-10 w-[80px] h-[80px] mr-5"></img>
           </Marquee>
     </section>
-    <section className="w-screen md:h-[500px] h-[600px]">
+    <section className="w-screen md:h-[500px] h-[700px]">
             <div>
               <h1 className="text-white text-center font-Poppins uppercase md:text-5xl relative md:top-3 font-bold text-2xl">Answers to Your <span className="text-green-800">FAQ's</span></h1>
               <p className="text-white text-center md:mt-6 md:m-36 p-5">As a leading <span className="text-green-800">digital transformation company</span>, we have compiled a list of frequently asked questions from our partners, drawing from our vast experience. Our goal is to help you achieve your objectives more effectively.</p>
