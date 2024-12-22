@@ -20,6 +20,10 @@ import devops from "../images/devops.png";
 import seo from "../images/seo.png";
 import employee from "../images/employee.png";
 import Commitment from "@/components/commitment";
+import { useRouter } from "next/navigation";
+import Footer from "@/components/footer";
+import Marquee from "react-fast-marquee";
+import FAQ from "@/components/faq";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -92,6 +96,8 @@ const Home = () => {
         };
     }, []);
 
+    const router = useRouter();
+
     return (
         <>
             <div className="relative bg-black min-h-screen overflow-x-hidden sm:overflow-x-scroll w-screen md:overflow-x-hidden xl:overflow-x-hidden">
@@ -117,7 +123,7 @@ const Home = () => {
                     className="Hero-section-content text-white relative w-screen h-screen md:h-[640px] z-20"
                     id="Hero-Content"
                 >
-                    <div className="md:relative md:flex md:flex-col md:left-10 md:h-screen md:w-screen md:justify-center">
+                    <div className="md:relative md:flex md:flex-col md:left-10 md:h-screen md:w-screen md:justify-center md:-top-8">
                     <p className="font-Poppins font-bold text-green-500 absolute md:top-44 md:text-[100px] uppercase transition-colors duration-300 hover:text-green-300 top-44 text-[40px] ml-3">
                         Revolutionizing
                     </p>
@@ -130,6 +136,7 @@ const Home = () => {
                         </p>
                         </div>
                     </div>
+                    <button className="bg-green-800 text-white md:relative md:top-[-90px] md:left-14 px-6 py-3 rounded-full  font-poppins font-medium text-lg uppercase hover:bg-green-700 relative top-16 left-3" onClick={() => {router.push("/contact-us")}}>Consultant our experts</button>
                 </section>
 
                 {/* Stats Section */}
@@ -187,11 +194,11 @@ const Home = () => {
                     </div>
                 </section>
 
-                <section className="relative md:top-20 md:left-14 top-10 left-10 w-screen md:h-[1390px] h-[2800px] md:overflow-y-hidden">
+                <section className="relative md:top-20 md:left-14 top-10 left-10 w-screen md:h-[1050px] h-[2400px] md:overflow-y-hidden">
                     <div className="md:flex md:flex-col md:items-center md:relative md:-left-[370px]">
-                    <h1 className="text-white uppercase font-Poppins font-extrabold md:text-5xl text-5xl md:relative md:-left-[90px]">Elevate Your</h1>
-                    <h1 className="text-white uppercase font-Poppins font-extrabold md:text-5xl text-4xl md:relative md:-left-20">Business With</h1>
-                    <h1 className="text-white uppercase font-Poppins font-extrabold md:text-5xl text-3xl">Digital <span className="text-green-800">innovation</span>.</h1>
+                    <h1 className="text-white uppercase font-Poppins font-extrabold md:text-5xl text-[35px] md:relative md:-left-[90px]">Elevate Your</h1>
+                    <h1 className="text-white uppercase font-Poppins font-extrabold md:text-5xl text-[35px] md:relative md:-left-20">Business With</h1>
+                    <h1 className="text-white uppercase font-Poppins font-extrabold md:text-5xl text-[30px]">Digital <span className="text-green-800">innovation</span>.</h1>
                     </div>
                     <div className="flex flex-col items-center relative -left-10 top-5 md:-left-96">
                     <div className="md:w-[500px] relative md:top-8 w-[300px] text-justify top-2 md:left-1">
@@ -225,31 +232,31 @@ const Home = () => {
                     </div>
                 </section>
                 <section className="Industries">
-                    <div className="relative -top-[400px] h-[540px] bg-gray-200" id="industries">
+                    <div className="relative -top-5 h-[540px] bg-gray-200" id="industries">
                         <h1 className="text-center font-Poppins font-extrabold md:text-[70px] relative md:top-1 uppercase text-[40px] top-2">Industries</h1>
                         <h1 className="text-green-800 text-sm font-lato font-bold relative  text-center md:text-[25px] md:-top-3">Where Ideas Transform into <span className="text-black">Digital Excellence</span>.</h1>
-                        <div className="relative max-w-full px-10 top-12 md:top-4" id="industryScrollContainer" ref={industryRef}>
-            <div className="flex gap-12 pb-6 overflow-auto" id="horizontal-container">
-                <IndustryDiv Name={"Automotive"} imageSrc={"automotive.jpg"} linkName={"automotive"}></IndustryDiv>
-                <IndustryDiv Name={"Real Estate"} imageSrc={"real-estate.jpg"} linkName={"real-estate"}></IndustryDiv>
-                <IndustryDiv Name={"Health Care"} imageSrc={"healthcare.jpg"} linkName={"healthcare"}></IndustryDiv>
-                <IndustryDiv Name={"E-commerce"} imageSrc={"ecommerce.jpg"} linkName={"e-commerce"}></IndustryDiv>
-                <IndustryDiv Name={"Transportation"} imageSrc={"transportation.jpg"} linkName={"transportation"}></IndustryDiv>
-                <IndustryDiv Name={"Manufacturing"} imageSrc={"manufacturing.jpg"} linkName={"manufacturing"}></IndustryDiv>
-                <IndustryDiv Name={"Software Vendors"} imageSrc={"software-dev.jpg"} linkName={"software-vendors"}></IndustryDiv>
-                <IndustryDiv Name={"Education"} imageSrc={"education.jpg"} linkName={"education"}></IndustryDiv>
-                <IndustryDiv Name={"Fintech"} imageSrc={"fintech.jpg"} linkName={"fintech"}></IndustryDiv>
-                <IndustryDiv Name={"Travel & Tourism"} imageSrc={"tourism.jpg"} linkName={"travel-and-tourism"}></IndustryDiv>
-                <IndustryDiv Name={"Entertainment"} imageSrc={"netflix.jpg"} linkName={"entertainment"}></IndustryDiv>
+                        <div className="relative max-w-full px-10 top-12 md:top-6" id="industryScrollContainer" ref={industryRef}>
+            <div className="flex gap-12 pb-8 overflow-auto" id="horizontal-container">
+                <IndustryDiv Name={"Automotive"} imageSrc={"Automotive.png"} linkName={"automotive"} Description={"Driving innovation in the automotive sector with IT solutions for smart manufacturing, connected vehicles, autonomous driving, and customer experience management."}></IndustryDiv>
+                <IndustryDiv Name={"Real Estate"} imageSrc={"Real_Estate.png"} linkName={"real-estate"} Description={"Empowering real estate businesses with advanced CRM systems, property management software, virtual tour technologies, and data analytics for market insights."}></IndustryDiv>
+                <IndustryDiv Name={"Health Care"} imageSrc={"Healthcare.png"} linkName={"healthcare"} Description={"Delivering IT solutions that enhance patient care through telemedicine platforms, electronic health records (EHR), AI diagnostics, and secure data management."}></IndustryDiv>
+                <IndustryDiv Name={"E-commerce"} imageSrc={"e-commerce.png"} linkName={"e-commerce"} Description={"Streamlining online retail operations with scalable e-commerce platforms, personalized recommendation engines, payment integrations, and logistics management tools."}></IndustryDiv>
+                <IndustryDiv Name={"Transportation"} imageSrc={"Transportation.png"} linkName={"transportation"} Description={"Optimizing transportation systems with fleet management software, route optimization algorithms, IoT-enabled logistics, and real-time tracking solutions."}></IndustryDiv>
+                <IndustryDiv Name={"Manufacturing"} imageSrc={"Manufacturing.png"} linkName={"manufacturing"} Description={"Transforming manufacturing operations with IoT-driven smart factories, ERP systems, predictive maintenance tools, and supply chain optimization solutions."}></IndustryDiv>
+                <IndustryDiv Name={"Software Vendors"} imageSrc={"Software_Vendors.png"} linkName={"software-vendors"} Description={"Supporting software vendors with custom software development, cloud migration services, DevOps consulting, and performance optimization."}></IndustryDiv>
+                <IndustryDiv Name={"Education"} imageSrc={"Education.png"} linkName={"education"} Description={"Enhancing learning experiences with e-learning platforms, virtual classrooms, AI-based student analytics, and scalable content delivery networks."}></IndustryDiv>
+                <IndustryDiv Name={"Fintech"} imageSrc={"Finance.png"} linkName={"fintech"} Description={"Innovating the financial sector with secure digital payment solutions, blockchain implementations, robo-advisory platforms, and fraud detection systems."}></IndustryDiv>
+                <IndustryDiv Name={"Travel & Tourism"} imageSrc={"Travel.png"} linkName={"travel-and-tourism"} Description={"Elevating travel and tourism with AI-driven itinerary planners, booking engines, customer engagement tools, and immersive AR/VR travel experiences."}></IndustryDiv>
+                <IndustryDiv Name={"Entertainment"} imageSrc={"Entertainment.png"} linkName={"entertainment"} Description={"Revolutionizing entertainment with streaming platforms, content recommendation engines, interactive gaming systems, and immersive AR/VR content solutions."}></IndustryDiv>
                 </div>
                 </div>
                 </div>
                 </section>
-                <section className="services">
-                    <h1 className="text-[40px] font-lato text-white text-center font-extrabold  uppercase relative -top-[380px] md:text-[70px]">Services</h1>
-                    <h1 className="text-green-700 text-lg font-lato font-bold relative -top-[380px]  text-center md:text-[25px]">Where Ideas Transform into <span className="text-white">Digital Excellence</span>.</h1>
+                <section className="services md:w-screen md:h-[1200px] h-[3150px]">
+                    <h1 className="text-[40px] font-lato text-white text-center font-extrabold  uppercase relative md:text-[70px]">Services</h1>
+                    <h1 className="text-green-700 text-[25px] font-lato font-bold relative text-center md:text-[25px]">Where Ideas Transform into <span className="text-white">Digital Excellence</span>.</h1>
                     <div className="flex justify-center items-center min-h-screen">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 relative -top-[370px] gap-2">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 relative gap-2 md:top-10 top-5">
                         <ServicesCard ServiceName={"Web Development"} ImgSrc={webDev} TitleSize={"xl"}></ServicesCard>
                         <ServicesCard ServiceName={"App Development"} ImgSrc={appDev} TitleSize={"xl"}></ServicesCard>
                         <ServicesCard ServiceName={"Software Development"} ImgSrc={software} TitleSize={"xl"}></ServicesCard>
@@ -260,15 +267,15 @@ const Home = () => {
                     </div>
                 </section>
                 <section className="Latest Technologies">
-      <div className="w-screen bg-slate-200 h-[1380px] relative -top-80 md:h-[920px]">
+      <div className="w-screen bg-slate-200 h-[1380px] relative md:h-[920px]">
         <div className="relative top-8 md:top-2">
-          <h1 className="text-[38px] font-Poppins text-black text-center font-bold uppercase relative top-3 md:text-[60px] -left-3">
+          <h1 className="text-[38px] font-Poppins text-black text-center font-bold uppercase relative top-3 md:text-[60px]">
             Using advanced
           </h1>
-          <h1 className="text-[35px] font-Poppins text-green-800 text-center font-bold uppercase relative top-3 md:text-[60px] -left-3">
+          <h1 className="text-[35px] font-Poppins text-green-800 text-center font-bold uppercase relative top-3 md:text-[60px]">
             technologies
           </h1>
-          <h1 className="text-[35px] font-Poppins text-black text-center font-bold uppercase relative top-3 md:text-[60px] -left-3">
+          <h1 className="text-[35px] font-Poppins text-black text-center font-bold uppercase relative top-3 md:text-[60px]">
             to maximise value.
           </h1>
           <p className=" text-justify relative top-8 font-lato font-normal md:font-bold md:text-xl md:w-[90%] md:h-[45px] w-[90%] h-[140px] left-5 md:text-center md:mb-2 md:left-[8vh]">
@@ -363,24 +370,46 @@ const Home = () => {
       </div>
     </section>
     <section className="Commitment and Guarantee">
-      <div className="w-screen h-[1700px] relative -top-80">
+      <div className="w-screen h-[1600px] relative sm:h-[1300px] md:h-[1000px] lg:h-[950px] ">
               <div className="">
-                <h1 className="text-white uppercase w-[350px] font-lato font-extrabold text-3xl relative top-20 left-6">Our Commitment & <span className="text-green-700">Guarantee</span></h1>
-                <p className="text-slate-200 text-justify relative top-20 ml-6 mt-3 font-Poppins text-lg mr-6">Toplogic delivers robust, scalable and high performance software, web and mobile app development services to help you harness the power of technology, consulting and maximize your online business investment.</p>
+                <h1 className="text-white uppercase w-[350px] font-lato font-extrabold text-3xl relative top-20 left-6 md:text-6xl md:w-[1000px] md:left-[20vh] md:top-14">Our Commitment & <span className="text-green-700">Guarantee</span></h1>
+                <p className="text-slate-200 text-justify relative top-20 ml-6 mt-3  text-lg mr-6 md:mt-2 md:w-[1000px] md:text-center md:left-[16vh]">Toplogic delivers robust, scalable and high performance software, web and mobile app development services to help you harness the power of technology, consulting and maximize your online business investment.</p>
               </div>
-
-            <img className="w-20 h-20 relative top-[150px] ml-4" src="employee.png"></img>
-            <h1 className="text-green-700 relative top-[150px] text-3xl font-Poppins ml-6 mb-4 mt-4 text-justify font-bold">100% Transparency</h1>
-            <p className="text-white relative top-36 text-justify ml-6 mr-6 font-Poppins">At Toplogic, we believe in complete transparency with our clients and we keep them fully updated during the entire development production cycle.</p>
+            <div className="md:grid md:grid-cols-2 md:left-[20vh] md: md:relative">
+            <Commitment title={"100% Transparency"} description={"At Toplogic, we believe in complete transparency with our clients and we keep them fully updated during the entire development production cycle."} imageSRC={"employee.png"}></Commitment>
 
             <Commitment title={"95% ONTIME DELIVERY"} description={"Our pursuit of agile development methodology have resulted in an enviable 95% on-time delivery track record for the past 20+ years of our operations."} imageSRC={"time.png"}></Commitment>
 
             <Commitment title={"30 DAYS FREE SUPPORT"} description={"We take complete responsibility of our work and provide free 30 days support to all our customer even after the software / mobile app has been launched."} imageSRC={"support.png"}></Commitment>
 
             <Commitment title={"FLEXIBLE ENGAGEMENTS"} description={"Toplogic offers tailor-made engagement models, hand crafted to meet the exact requirements of clients with diverse business needs"} imageSRC={"engagement.png"}></Commitment>
+            </div>
       </div>
     </section>
+    <section className="md:mb-10 bg-slate-100 w-screen md:h-[400px] h-[300px] mb-10 clientele">
+          <h1 className="md:text-[60px] text-center relative top-2 font-Poppins font-extrabold uppercase text-green-900 text-4xl">
+            Clientele
+          </h1>
+          <p className="text-center font-Poppins font-semibold md:text-[20px] mt-4 p-1">Our <span className="text-green-900">valued clients</span> are at the heart of everything we do.</p>
+          <Marquee className="relative  border-black top-10">
+            <img src="/UP_GOVT.png" className="md:w-[100px] md:h-[100px] w-[80px] h-[80px] mr-5" alt="Uttar Pradesh Government">
+            </img>
+            <img src="/cornitos.png" className="md:w-[200px] md:h-[150px] relative md:-top-3 w-[80px] h-[80px] mr-5" alt="Cornitos Nachos">
+            </img>
+            <img src="/bjvn.png" className="md:w-[100px] md:h-[100px] w-[80px] h-[80px] mr-5"></img>
+            <img src="/pgi.png" className="md:w-[100px] md:h-[100px] md:ml-10 md:mb-2 w-[80px] h-[80px] mr-7"></img>
+            <img src="/ssa_background.png" className="md:w-[150px] md:h-[150px] md:ml-10 w-[80px] h-[80px] mr-5"></img>
+          </Marquee>
+    </section>
+    <section className="w-screen md:h-[500px] h-[600px]">
+            <div>
+              <h1 className="text-white text-center font-Poppins uppercase md:text-5xl relative md:top-3 font-bold text-2xl">Answers to Your <span className="text-green-800">FAQ's</span></h1>
+              <p className="text-white text-center md:mt-6 md:m-36 p-5">As a leading <span className="text-green-800">digital transformation company</span>, we have compiled a list of frequently asked questions from our partners, drawing from our vast experience. Our goal is to help you achieve your objectives more effectively.</p>
+              <FAQ></FAQ>
             </div>
+    </section>
+      <Footer/>
+        </div>
         </>
     );
 };
